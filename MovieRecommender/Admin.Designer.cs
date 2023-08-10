@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grpbxAdmin = new System.Windows.Forms.GroupBox();
+            this.txtAdminYili = new System.Windows.Forms.TextBox();
+            this.txtAdminFlmİsmi = new System.Windows.Forms.TextBox();
             this.chckbxAdminKomedi = new System.Windows.Forms.CheckBox();
             this.chkbxAdminDram = new System.Windows.Forms.CheckBox();
             this.chkbxAdminMacera = new System.Windows.Forms.CheckBox();
@@ -42,8 +44,6 @@
             this.lblAdminTurGerilim = new System.Windows.Forms.Label();
             this.lblAdminTurKorku = new System.Windows.Forms.Label();
             this.btnAdminFlmEkle = new System.Windows.Forms.Button();
-            this.txtAdminFlmİsmi = new System.Windows.Forms.TextBox();
-            this.txtAdminYili = new System.Windows.Forms.TextBox();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
             this.grpbxAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
@@ -71,6 +71,26 @@
             this.grpbxAdmin.Size = new System.Drawing.Size(480, 537);
             this.grpbxAdmin.TabIndex = 14;
             this.grpbxAdmin.TabStop = false;
+            // 
+            // txtAdminYili
+            // 
+            this.txtAdminYili.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAdminYili.Location = new System.Drawing.Point(237, 177);
+            this.txtAdminYili.Multiline = true;
+            this.txtAdminYili.Name = "txtAdminYili";
+            this.txtAdminYili.Size = new System.Drawing.Size(204, 24);
+            this.txtAdminYili.TabIndex = 31;
+            this.txtAdminYili.Text = "Çıkış Yılı";
+            // 
+            // txtAdminFlmİsmi
+            // 
+            this.txtAdminFlmİsmi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAdminFlmİsmi.Location = new System.Drawing.Point(237, 84);
+            this.txtAdminFlmİsmi.Multiline = true;
+            this.txtAdminFlmİsmi.Name = "txtAdminFlmİsmi";
+            this.txtAdminFlmİsmi.Size = new System.Drawing.Size(204, 24);
+            this.txtAdminFlmİsmi.TabIndex = 27;
+            this.txtAdminFlmİsmi.Text = "Film İsmi";
             // 
             // chckbxAdminKomedi
             // 
@@ -194,24 +214,6 @@
             this.btnAdminFlmEkle.TabIndex = 14;
             this.btnAdminFlmEkle.Text = "Ekle";
             this.btnAdminFlmEkle.UseVisualStyleBackColor = true;
-            // 
-            // txtAdminFlmİsmi
-            // 
-            this.txtAdminFlmİsmi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdminFlmİsmi.Location = new System.Drawing.Point(237, 83);
-            this.txtAdminFlmİsmi.Name = "txtAdminFlmİsmi";
-            this.txtAdminFlmİsmi.Size = new System.Drawing.Size(204, 21);
-            this.txtAdminFlmİsmi.TabIndex = 27;
-            this.txtAdminFlmİsmi.Text = "Film İsmi";
-            // 
-            // txtAdminYili
-            // 
-            this.txtAdminYili.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdminYili.Location = new System.Drawing.Point(237, 177);
-            this.txtAdminYili.Name = "txtAdminYili";
-            this.txtAdminYili.Size = new System.Drawing.Size(204, 21);
-            this.txtAdminYili.TabIndex = 31;
-            this.txtAdminYili.Text = "Çıkış Yılı";
             // 
             // dgvAdmin
             // 
