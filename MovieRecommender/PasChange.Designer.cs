@@ -31,8 +31,6 @@
             this.lblPasChangeUsername = new System.Windows.Forms.Label();
             this.txtbxPasChangeUsername = new System.Windows.Forms.TextBox();
             this.grpbxPasChange = new System.Windows.Forms.GroupBox();
-            this.lblPasChangeFail = new System.Windows.Forms.Label();
-            this.lblPasChangeSucces = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -63,8 +61,6 @@
             // grpbxPasChange
             // 
             this.grpbxPasChange.BackColor = System.Drawing.Color.Khaki;
-            this.grpbxPasChange.Controls.Add(this.lblPasChangeFail);
-            this.grpbxPasChange.Controls.Add(this.lblPasChangeSucces);
             this.grpbxPasChange.Controls.Add(this.label1);
             this.grpbxPasChange.Controls.Add(this.label2);
             this.grpbxPasChange.Controls.Add(this.button1);
@@ -76,30 +72,6 @@
             this.grpbxPasChange.TabIndex = 6;
             this.grpbxPasChange.TabStop = false;
             this.grpbxPasChange.Visible = false;
-            // 
-            // lblPasChangeFail
-            // 
-            this.lblPasChangeFail.AutoSize = true;
-            this.lblPasChangeFail.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasChangeFail.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblPasChangeFail.Location = new System.Drawing.Point(125, 326);
-            this.lblPasChangeFail.Name = "lblPasChangeFail";
-            this.lblPasChangeFail.Size = new System.Drawing.Size(143, 16);
-            this.lblPasChangeFail.TabIndex = 13;
-            this.lblPasChangeFail.Text = "Şifreniz Değiştirilemedi";
-            this.lblPasChangeFail.Visible = false;
-            // 
-            // lblPasChangeSucces
-            // 
-            this.lblPasChangeSucces.AutoSize = true;
-            this.lblPasChangeSucces.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasChangeSucces.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblPasChangeSucces.Location = new System.Drawing.Point(112, 298);
-            this.lblPasChangeSucces.Name = "lblPasChangeSucces";
-            this.lblPasChangeSucces.Size = new System.Drawing.Size(174, 16);
-            this.lblPasChangeSucces.TabIndex = 12;
-            this.lblPasChangeSucces.Text = "Şifreniz Başarıyla Değiştirildi";
-            this.lblPasChangeSucces.Visible = false;
             // 
             // label1
             // 
@@ -185,8 +157,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnPasChangeChange;
-        private System.Windows.Forms.Label lblPasChangeFail;
-        private System.Windows.Forms.Label lblPasChangeSucces;
         private System.Windows.Forms.Label label1;
     }
 }
