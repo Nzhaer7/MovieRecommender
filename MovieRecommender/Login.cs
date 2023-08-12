@@ -24,5 +24,13 @@ namespace MovieRecommender
             pasChange.ShowDialog();
             this.Close();
         }
+
+        private void lblKayitOl_Click(object sender, EventArgs e)
+        {
+            SignIn signIn = new SignIn();
+            this.Hide();
+            signIn.ShowDialog();
+            this.Close();
+        }
     }
 }

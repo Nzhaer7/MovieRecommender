@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblAdiminSifremiUnuttum = new System.Windows.Forms.Label();
+            this.lblKayitOl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAdminGiris
@@ -93,12 +94,25 @@
             this.lblAdiminSifremiUnuttum.Text = "Şifremi Unuttum";
             this.lblAdiminSifremiUnuttum.Click += new System.EventHandler(this.lblAdiminSifremiUnuttum_Click);
             // 
+            // lblKayitOl
+            // 
+            this.lblKayitOl.AutoSize = true;
+            this.lblKayitOl.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKayitOl.ForeColor = System.Drawing.Color.OliveDrab;
+            this.lblKayitOl.Location = new System.Drawing.Point(380, 469);
+            this.lblKayitOl.Name = "lblKayitOl";
+            this.lblKayitOl.Size = new System.Drawing.Size(61, 19);
+            this.lblKayitOl.TabIndex = 6;
+            this.lblKayitOl.Text = "Kayıt Ol";
+            this.lblKayitOl.Click += new System.EventHandler(this.lblKayitOl_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.lblKayitOl);
             this.Controls.Add(this.lblAdiminSifremiUnuttum);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -120,5 +134,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblAdiminSifremiUnuttum;
+        private System.Windows.Forms.Label lblKayitOl;
     }
 }

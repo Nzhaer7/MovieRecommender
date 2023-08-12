@@ -45,12 +45,14 @@
             this.lblAdminTurKorku = new System.Windows.Forms.Label();
             this.btnAdminFlmEkle = new System.Windows.Forms.Button();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
+            this.txtbxAdminPuani = new System.Windows.Forms.TextBox();
             this.grpbxAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // grpbxAdmin
             // 
+            this.grpbxAdmin.Controls.Add(this.txtbxAdminPuani);
             this.grpbxAdmin.Controls.Add(this.txtAdminYili);
             this.grpbxAdmin.Controls.Add(this.txtAdminFlmİsmi);
             this.grpbxAdmin.Controls.Add(this.chckbxAdminKomedi);
@@ -75,7 +77,7 @@
             // txtAdminYili
             // 
             this.txtAdminYili.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdminYili.Location = new System.Drawing.Point(237, 177);
+            this.txtAdminYili.Location = new System.Drawing.Point(237, 155);
             this.txtAdminYili.Multiline = true;
             this.txtAdminYili.Name = "txtAdminYili";
             this.txtAdminYili.Size = new System.Drawing.Size(204, 24);
@@ -214,6 +216,7 @@
             this.btnAdminFlmEkle.TabIndex = 14;
             this.btnAdminFlmEkle.Text = "Ekle";
             this.btnAdminFlmEkle.UseVisualStyleBackColor = true;
+            this.btnAdminFlmEkle.Click += new System.EventHandler(this.btnAdminFlmEkle_Click);
             // 
             // dgvAdmin
             // 
@@ -222,6 +225,16 @@
             this.dgvAdmin.Name = "dgvAdmin";
             this.dgvAdmin.Size = new System.Drawing.Size(363, 537);
             this.dgvAdmin.TabIndex = 15;
+            // 
+            // txtbxAdminPuani
+            // 
+            this.txtbxAdminPuani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtbxAdminPuani.Location = new System.Drawing.Point(237, 222);
+            this.txtbxAdminPuani.Multiline = true;
+            this.txtbxAdminPuani.Name = "txtbxAdminPuani";
+            this.txtbxAdminPuani.Size = new System.Drawing.Size(204, 24);
+            this.txtbxAdminPuani.TabIndex = 32;
+            this.txtbxAdminPuani.Text = "İMDB Puanı";
             // 
             // Admin
             // 
@@ -233,6 +246,7 @@
             this.Controls.Add(this.grpbxAdmin);
             this.Name = "Admin";
             this.Text = "Movie Recommender";
+            this.Load += new System.EventHandler(this.Admin_Load);
             this.grpbxAdmin.ResumeLayout(false);
             this.grpbxAdmin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).EndInit();
@@ -259,5 +273,6 @@
         private System.Windows.Forms.TextBox txtAdminFlmİsmi;
         private System.Windows.Forms.TextBox txtAdminYili;
         private System.Windows.Forms.DataGridView dgvAdmin;
+        private System.Windows.Forms.TextBox txtbxAdminPuani;
     }
 }
