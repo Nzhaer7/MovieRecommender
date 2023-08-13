@@ -41,5 +41,25 @@ namespace MovieRecommender
             giris.ShowDialog();
             this.Close();
         }
+
+        MovieDbContext movieDbContext = new MovieDbContext();
+        private void btnAdminGiris_Click(object sender, EventArgs e)
+        {
+            foreach (var data in movieDbContext.Users)          
+            { 
+                if (txtbxLoginKullaniciAdi.Text == data.UserName && txtbxLoginSifre.Text == data.Password)
+                {
+                    Admin admin = new Admin();
+                    this.Hide();
+                    admin.ShowDialog();
+                    this.Close();
+                }
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txtbxLoginSifre.PasswordChar = '*';
+        }
     }
 }

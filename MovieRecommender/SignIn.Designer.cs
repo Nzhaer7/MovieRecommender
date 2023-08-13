@@ -129,6 +129,7 @@
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
+            this.Load += new System.EventHandler(this.SignIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

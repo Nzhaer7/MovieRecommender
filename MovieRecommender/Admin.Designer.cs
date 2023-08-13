@@ -47,12 +47,16 @@
             this.btnAdminFlmEkle = new System.Windows.Forms.Button();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
             this.btnAdminGeriGit = new System.Windows.Forms.Button();
+            this.btnAdminSil = new System.Windows.Forms.Button();
+            this.btnAdminGuncelle = new System.Windows.Forms.Button();
             this.grpbxAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // grpbxAdmin
             // 
+            this.grpbxAdmin.Controls.Add(this.btnAdminGuncelle);
+            this.grpbxAdmin.Controls.Add(this.btnAdminSil);
             this.grpbxAdmin.Controls.Add(this.txtbxAdminPuani);
             this.grpbxAdmin.Controls.Add(this.txtAdminYili);
             this.grpbxAdmin.Controls.Add(this.txtAdminFlmİsmi);
@@ -221,7 +225,7 @@
             // 
             // btnAdminFlmEkle
             // 
-            this.btnAdminFlmEkle.Location = new System.Drawing.Point(174, 391);
+            this.btnAdminFlmEkle.Location = new System.Drawing.Point(86, 378);
             this.btnAdminFlmEkle.Name = "btnAdminFlmEkle";
             this.btnAdminFlmEkle.Size = new System.Drawing.Size(107, 29);
             this.btnAdminFlmEkle.TabIndex = 14;
@@ -236,6 +240,7 @@
             this.dgvAdmin.Name = "dgvAdmin";
             this.dgvAdmin.Size = new System.Drawing.Size(363, 537);
             this.dgvAdmin.TabIndex = 15;
+            this.dgvAdmin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmin_CellClick);
             // 
             // btnAdminGeriGit
             // 
@@ -246,6 +251,26 @@
             this.btnAdminGeriGit.Text = "Geri Git";
             this.btnAdminGeriGit.UseVisualStyleBackColor = true;
             this.btnAdminGeriGit.Click += new System.EventHandler(this.btnAdminGeriGit_Click);
+            // 
+            // btnAdminSil
+            // 
+            this.btnAdminSil.Location = new System.Drawing.Point(334, 378);
+            this.btnAdminSil.Name = "btnAdminSil";
+            this.btnAdminSil.Size = new System.Drawing.Size(107, 29);
+            this.btnAdminSil.TabIndex = 33;
+            this.btnAdminSil.Text = "Sil";
+            this.btnAdminSil.UseVisualStyleBackColor = true;
+            this.btnAdminSil.Click += new System.EventHandler(this.btnAdminSil_Click);
+            // 
+            // btnAdminGuncelle
+            // 
+            this.btnAdminGuncelle.Location = new System.Drawing.Point(209, 378);
+            this.btnAdminGuncelle.Name = "btnAdminGuncelle";
+            this.btnAdminGuncelle.Size = new System.Drawing.Size(107, 29);
+            this.btnAdminGuncelle.TabIndex = 35;
+            this.btnAdminGuncelle.Text = "Güncelle";
+            this.btnAdminGuncelle.UseVisualStyleBackColor = true;
+            this.btnAdminGuncelle.Click += new System.EventHandler(this.btnAdminGuncelle_Click);
             // 
             // Admin
             // 
@@ -288,5 +313,7 @@
         private System.Windows.Forms.DataGridView dgvAdmin;
         private System.Windows.Forms.TextBox txtbxAdminPuani;
         private System.Windows.Forms.Button btnAdminGeriGit;
+        private System.Windows.Forms.Button btnAdminSil;
+        private System.Windows.Forms.Button btnAdminGuncelle;
     }
 }

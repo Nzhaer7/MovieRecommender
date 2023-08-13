@@ -85,5 +85,41 @@ namespace MovieRecommender
             giris.ShowDialog();
             this.Close();
         }
+
+        private void btnAdminSil_Click(object sender, EventArgs e)
+        {
+            int İd = Convert.ToInt32(dgvAdmin.CurrentRow.Cells[0].Value);
+            var kayıt = movieDbContext.Movies.Find(İd);
+
+            movieDbContext.Movies.Remove(kayıt);
+            var result = movieDbContext.SaveChanges();
+            if (result > 0)
+                MessageBox.Show("Kayıt başarı ile silindi", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void dgvAdmin_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int İd = Convert.ToInt32(dgvAdmin.CurrentRow.Cells[0].Value);
+            var kayıt = movieDbContext.Movies.Find(İd);
+
+            txtAdminFlmİsmi.Text=kayıt.MovieName;
+            txtAdminYili.Text=kayıt.MovieYear.ToString();
+            txtbxAdminPuani.Text=kayıt.MovieScore.ToString();
+
+        }
+
+        private void btnAdminGuncelle_Click(object sender, EventArgs e)
+        {
+            int İd = Convert.ToInt32(dgvAdmin.CurrentRow.Cells[0].Value);
+            var kayıt = movieDbContext.Movies.Find(İd);
+
+            kayıt.MovieName = txtAdminFlmİsmi.Text;
+            kayıt.MovieYear = Convert.ToInt32(txtAdminYili.Text);
+            kayıt.MovieScore = Convert.ToInt32(txtbxAdminPuani.Text);
+
+            var result = movieDbContext.SaveChanges();
+            if (result > 0)
+                MessageBox.Show("Kayıt başarı ile güncllendi","", MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
     }
 }

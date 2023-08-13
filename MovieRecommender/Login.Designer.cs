@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.btnAdminGiris = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtbxLoginKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.txtbxLoginSifre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblAdiminSifremiUnuttum = new System.Windows.Forms.Label();
@@ -46,22 +46,23 @@
             this.btnAdminGiris.TabIndex = 0;
             this.btnAdminGiris.Text = "Giriş Yap";
             this.btnAdminGiris.UseVisualStyleBackColor = true;
+            this.btnAdminGiris.Click += new System.EventHandler(this.btnAdminGiris_Click);
             // 
-            // textBox1
+            // txtbxLoginKullaniciAdi
             // 
-            this.textBox1.Location = new System.Drawing.Point(305, 148);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtbxLoginKullaniciAdi.Location = new System.Drawing.Point(305, 148);
+            this.txtbxLoginKullaniciAdi.Multiline = true;
+            this.txtbxLoginKullaniciAdi.Name = "txtbxLoginKullaniciAdi";
+            this.txtbxLoginKullaniciAdi.Size = new System.Drawing.Size(207, 23);
+            this.txtbxLoginKullaniciAdi.TabIndex = 1;
             // 
-            // textBox2
+            // txtbxLoginSifre
             // 
-            this.textBox2.Location = new System.Drawing.Point(305, 274);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 23);
-            this.textBox2.TabIndex = 2;
+            this.txtbxLoginSifre.Location = new System.Drawing.Point(305, 274);
+            this.txtbxLoginSifre.Multiline = true;
+            this.txtbxLoginSifre.Name = "txtbxLoginSifre";
+            this.txtbxLoginSifre.Size = new System.Drawing.Size(207, 23);
+            this.txtbxLoginSifre.TabIndex = 2;
             // 
             // label1
             // 
@@ -128,12 +129,13 @@
             this.Controls.Add(this.lblAdiminSifremiUnuttum);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbxLoginSifre);
+            this.Controls.Add(this.txtbxLoginKullaniciAdi);
             this.Controls.Add(this.btnAdminGiris);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,8 +144,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnAdminGiris;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtbxLoginKullaniciAdi;
+        private System.Windows.Forms.TextBox txtbxLoginSifre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblAdiminSifremiUnuttum;

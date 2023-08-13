@@ -61,8 +61,11 @@ namespace MovieRecommender
                 );
                 var result = movieDbContext.SaveChanges();
                 if(result>0)
-                MessageBox.Show("Başarı ile kayıt olundu");
-                
+                MessageBox.Show("Başarı ile kayıt olundu", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Login login = new Login();
+                this.Hide();
+                login.ShowDialog();
+                this.Close();
             }
             
         }
@@ -73,6 +76,12 @@ namespace MovieRecommender
             this.Hide();
             login.ShowDialog();
             this.Close();
+        }
+
+        private void SignIn_Load(object sender, EventArgs e)
+        {
+            txtbxSignInSifre.PasswordChar = '*';
+            txtbxSignInSifreTekrar.PasswordChar = '*';
         }
     }
 }
