@@ -21,5 +21,13 @@ namespace MovieRecommender
         {
             grpbxPasChange.Visible = true;
         }
+
+        private void btnPasChangeGeriGit_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
+        }
     }
 }

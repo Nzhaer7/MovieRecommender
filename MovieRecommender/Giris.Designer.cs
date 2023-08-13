@@ -41,7 +41,6 @@
             this.btnAdminForm.Text = "Admin";
             this.btnAdminForm.UseVisualStyleBackColor = true;
             this.btnAdminForm.Click += new System.EventHandler(this.button1_Click);
-            this.btnAdminForm.Leave += new System.EventHandler(this.button1_Click);
             // 
             // btnUserForm
             // 
@@ -62,6 +61,7 @@
             this.Controls.Add(this.btnUserForm);
             this.Controls.Add(this.btnAdminForm);
             this.Name = "Giris";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
             this.ResumeLayout(false);
 

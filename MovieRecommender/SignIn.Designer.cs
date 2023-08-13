@@ -35,6 +35,7 @@
             this.btnAdminGiris = new System.Windows.Forms.Button();
             this.txtbxSignInSifreTekrar = new System.Windows.Forms.TextBox();
             this.lblSignInSifreTekrar = new System.Windows.Forms.Label();
+            this.btnSignInGeriGit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblSignInSifre
@@ -101,12 +102,23 @@
             this.lblSignInSifreTekrar.TabIndex = 11;
             this.lblSignInSifreTekrar.Text = "Şifre Tekrar";
             // 
+            // btnSignInGeriGit
+            // 
+            this.btnSignInGeriGit.Location = new System.Drawing.Point(12, 12);
+            this.btnSignInGeriGit.Name = "btnSignInGeriGit";
+            this.btnSignInGeriGit.Size = new System.Drawing.Size(75, 23);
+            this.btnSignInGeriGit.TabIndex = 19;
+            this.btnSignInGeriGit.Text = "Geri Git";
+            this.btnSignInGeriGit.UseVisualStyleBackColor = true;
+            this.btnSignInGeriGit.Click += new System.EventHandler(this.btnSignInGeriGit_Click);
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.btnSignInGeriGit);
             this.Controls.Add(this.lblSignInSifreTekrar);
             this.Controls.Add(this.txtbxSignInSifreTekrar);
             this.Controls.Add(this.lblSignInSifre);
@@ -115,6 +127,7 @@
             this.Controls.Add(this.txtbxSignInKullaniciAdi);
             this.Controls.Add(this.btnAdminGiris);
             this.Name = "SignIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,5 +143,6 @@
         private System.Windows.Forms.Button btnAdminGiris;
         private System.Windows.Forms.TextBox txtbxSignInSifreTekrar;
         private System.Windows.Forms.Label lblSignInSifreTekrar;
+        private System.Windows.Forms.Button btnSignInGeriGit;
     }
 }

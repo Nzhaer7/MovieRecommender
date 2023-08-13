@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblAdiminSifremiUnuttum = new System.Windows.Forms.Label();
             this.lblKayitOl = new System.Windows.Forms.Label();
+            this.btnLoginGeriGit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdminGiris
@@ -106,12 +107,23 @@
             this.lblKayitOl.Text = "Kayıt Ol";
             this.lblKayitOl.Click += new System.EventHandler(this.lblKayitOl_Click);
             // 
+            // btnLoginGeriGit
+            // 
+            this.btnLoginGeriGit.Location = new System.Drawing.Point(12, 12);
+            this.btnLoginGeriGit.Name = "btnLoginGeriGit";
+            this.btnLoginGeriGit.Size = new System.Drawing.Size(75, 23);
+            this.btnLoginGeriGit.TabIndex = 19;
+            this.btnLoginGeriGit.Text = "Geri Git";
+            this.btnLoginGeriGit.UseVisualStyleBackColor = true;
+            this.btnLoginGeriGit.Click += new System.EventHandler(this.btnLoginGeriGit_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.btnLoginGeriGit);
             this.Controls.Add(this.lblKayitOl);
             this.Controls.Add(this.lblAdiminSifremiUnuttum);
             this.Controls.Add(this.label2);
@@ -120,6 +132,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnAdminGiris);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,5 +148,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblAdiminSifremiUnuttum;
         private System.Windows.Forms.Label lblKayitOl;
+        private System.Windows.Forms.Button btnLoginGeriGit;
     }
 }

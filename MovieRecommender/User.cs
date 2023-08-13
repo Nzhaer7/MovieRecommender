@@ -16,5 +16,13 @@ namespace MovieRecommender
         {
             InitializeComponent();
         }
+
+        private void btnUserGeriGit_Click(object sender, EventArgs e)
+        {
+            Giris giris = new Giris();
+            this.Hide();
+            giris.ShowDialog();
+            this.Close();
+        }
     }
 }

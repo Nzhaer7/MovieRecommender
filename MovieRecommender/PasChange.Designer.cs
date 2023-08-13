@@ -37,6 +37,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnPasChangeChange = new System.Windows.Forms.Button();
+            this.btnPasChangeGeriGit = new System.Windows.Forms.Button();
             this.grpbxPasChange.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,17 +129,29 @@
             this.btnPasChangeChange.UseVisualStyleBackColor = true;
             this.btnPasChangeChange.Click += new System.EventHandler(this.btnPasChangeChange_Click);
             // 
+            // btnPasChangeGeriGit
+            // 
+            this.btnPasChangeGeriGit.Location = new System.Drawing.Point(12, 12);
+            this.btnPasChangeGeriGit.Name = "btnPasChangeGeriGit";
+            this.btnPasChangeGeriGit.Size = new System.Drawing.Size(75, 23);
+            this.btnPasChangeGeriGit.TabIndex = 19;
+            this.btnPasChangeGeriGit.Text = "Geri Git";
+            this.btnPasChangeGeriGit.UseVisualStyleBackColor = true;
+            this.btnPasChangeGeriGit.Click += new System.EventHandler(this.btnPasChangeGeriGit_Click);
+            // 
             // PasChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.btnPasChangeGeriGit);
             this.Controls.Add(this.btnPasChangeChange);
             this.Controls.Add(this.grpbxPasChange);
             this.Controls.Add(this.lblPasChangeUsername);
             this.Controls.Add(this.txtbxPasChangeUsername);
             this.Name = "PasChange";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
             this.grpbxPasChange.ResumeLayout(false);
             this.grpbxPasChange.PerformLayout();
@@ -158,5 +171,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnPasChangeChange;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPasChangeGeriGit;
     }
 }

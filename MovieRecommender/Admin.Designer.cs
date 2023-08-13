@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpbxAdmin = new System.Windows.Forms.GroupBox();
+            this.txtbxAdminPuani = new System.Windows.Forms.TextBox();
             this.txtAdminYili = new System.Windows.Forms.TextBox();
             this.txtAdminFlmİsmi = new System.Windows.Forms.TextBox();
             this.chckbxAdminKomedi = new System.Windows.Forms.CheckBox();
@@ -45,7 +46,7 @@
             this.lblAdminTurKorku = new System.Windows.Forms.Label();
             this.btnAdminFlmEkle = new System.Windows.Forms.Button();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
-            this.txtbxAdminPuani = new System.Windows.Forms.TextBox();
+            this.btnAdminGeriGit = new System.Windows.Forms.Button();
             this.grpbxAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.SuspendLayout();
@@ -68,11 +69,21 @@
             this.grpbxAdmin.Controls.Add(this.lblAdminTurGerilim);
             this.grpbxAdmin.Controls.Add(this.lblAdminTurKorku);
             this.grpbxAdmin.Controls.Add(this.btnAdminFlmEkle);
-            this.grpbxAdmin.Location = new System.Drawing.Point(12, 12);
+            this.grpbxAdmin.Location = new System.Drawing.Point(12, 40);
             this.grpbxAdmin.Name = "grpbxAdmin";
-            this.grpbxAdmin.Size = new System.Drawing.Size(480, 537);
+            this.grpbxAdmin.Size = new System.Drawing.Size(480, 509);
             this.grpbxAdmin.TabIndex = 14;
             this.grpbxAdmin.TabStop = false;
+            // 
+            // txtbxAdminPuani
+            // 
+            this.txtbxAdminPuani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtbxAdminPuani.Location = new System.Drawing.Point(237, 222);
+            this.txtbxAdminPuani.Multiline = true;
+            this.txtbxAdminPuani.Name = "txtbxAdminPuani";
+            this.txtbxAdminPuani.Size = new System.Drawing.Size(204, 24);
+            this.txtbxAdminPuani.TabIndex = 32;
+            this.txtbxAdminPuani.Text = "İMDB Puanı";
             // 
             // txtAdminYili
             // 
@@ -226,15 +237,15 @@
             this.dgvAdmin.Size = new System.Drawing.Size(363, 537);
             this.dgvAdmin.TabIndex = 15;
             // 
-            // txtbxAdminPuani
+            // btnAdminGeriGit
             // 
-            this.txtbxAdminPuani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtbxAdminPuani.Location = new System.Drawing.Point(237, 222);
-            this.txtbxAdminPuani.Multiline = true;
-            this.txtbxAdminPuani.Name = "txtbxAdminPuani";
-            this.txtbxAdminPuani.Size = new System.Drawing.Size(204, 24);
-            this.txtbxAdminPuani.TabIndex = 32;
-            this.txtbxAdminPuani.Text = "İMDB Puanı";
+            this.btnAdminGeriGit.Location = new System.Drawing.Point(12, 11);
+            this.btnAdminGeriGit.Name = "btnAdminGeriGit";
+            this.btnAdminGeriGit.Size = new System.Drawing.Size(75, 23);
+            this.btnAdminGeriGit.TabIndex = 18;
+            this.btnAdminGeriGit.Text = "Geri Git";
+            this.btnAdminGeriGit.UseVisualStyleBackColor = true;
+            this.btnAdminGeriGit.Click += new System.EventHandler(this.btnAdminGeriGit_Click);
             // 
             // Admin
             // 
@@ -242,9 +253,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.btnAdminGeriGit);
             this.Controls.Add(this.dgvAdmin);
             this.Controls.Add(this.grpbxAdmin);
             this.Name = "Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.grpbxAdmin.ResumeLayout(false);
@@ -274,5 +287,6 @@
         private System.Windows.Forms.TextBox txtAdminYili;
         private System.Windows.Forms.DataGridView dgvAdmin;
         private System.Windows.Forms.TextBox txtbxAdminPuani;
+        private System.Windows.Forms.Button btnAdminGeriGit;
     }
 }

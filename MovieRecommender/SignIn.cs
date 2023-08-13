@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
+using System.Text.RegularExpressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,14 +21,23 @@ namespace MovieRecommender
             InitializeComponent();
         }
         MovieDbContext movieDbContext = new MovieDbContext();
+        Regex validateGuidRegex = new Regex("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
 
         public string Sifre()
         {
             string result;
-            if (txtbxSignInSifre.Text==txtbxSignInSifreTekrar.Text && txtbxSignInSifre.Text!="")
+            if (txtbxSignInSifre.Text==txtbxSignInSifreTekrar.Text)
             {
-                result = txtbxSignInSifre.Text.ToString();
-                return result;
+                if (validateGuidRegex.IsMatch(txtbxSignInSifre.Text.ToString()))
+                {
+                    result = txtbxSignInSifre.Text.ToString();
+                    return result;
+                }
+                else 
+                {
+                    MessageBox.Show("Hatalı formatta şifre girdiniz", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "0";
+                }
             }
             else
             {
@@ -35,6 +45,7 @@ namespace MovieRecommender
                 return "0";
             }
             
+
         }
         private void btnAdminGiris_Click(object sender, EventArgs e)
         {
@@ -54,6 +65,14 @@ namespace MovieRecommender
                 
             }
             
+        }
+
+        private void btnSignInGeriGit_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();  
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
         }
     }
 }

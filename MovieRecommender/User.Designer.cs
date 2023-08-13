@@ -43,6 +43,7 @@
             this.lblUserTurKorku = new System.Windows.Forms.Label();
             this.btnUserFlmAra = new System.Windows.Forms.Button();
             this.rtxtBxUser = new System.Windows.Forms.RichTextBox();
+            this.btnUserGeriGit = new System.Windows.Forms.Button();
             this.grpbxUser.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,9 +62,9 @@
             this.grpbxUser.Controls.Add(this.lblUserTurGerilim);
             this.grpbxUser.Controls.Add(this.lblUserTurKorku);
             this.grpbxUser.Controls.Add(this.btnUserFlmAra);
-            this.grpbxUser.Location = new System.Drawing.Point(12, 12);
+            this.grpbxUser.Location = new System.Drawing.Point(12, 40);
             this.grpbxUser.Name = "grpbxUser";
-            this.grpbxUser.Size = new System.Drawing.Size(480, 537);
+            this.grpbxUser.Size = new System.Drawing.Size(480, 510);
             this.grpbxUser.TabIndex = 15;
             this.grpbxUser.TabStop = false;
             // 
@@ -199,15 +200,27 @@
             this.rtxtBxUser.TabIndex = 16;
             this.rtxtBxUser.Text = "";
             // 
+            // btnUserGeriGit
+            // 
+            this.btnUserGeriGit.Location = new System.Drawing.Point(12, 11);
+            this.btnUserGeriGit.Name = "btnUserGeriGit";
+            this.btnUserGeriGit.Size = new System.Drawing.Size(75, 23);
+            this.btnUserGeriGit.TabIndex = 17;
+            this.btnUserGeriGit.Text = "Geri Git";
+            this.btnUserGeriGit.UseVisualStyleBackColor = true;
+            this.btnUserGeriGit.Click += new System.EventHandler(this.btnUserGeriGit_Click);
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.btnUserGeriGit);
             this.Controls.Add(this.rtxtBxUser);
             this.Controls.Add(this.grpbxUser);
             this.Name = "User";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
             this.grpbxUser.ResumeLayout(false);
             this.grpbxUser.PerformLayout();
@@ -232,5 +245,6 @@
         private System.Windows.Forms.Label lblUserTurKorku;
         private System.Windows.Forms.Button btnUserFlmAra;
         private System.Windows.Forms.RichTextBox rtxtBxUser;
+        private System.Windows.Forms.Button btnUserGeriGit;
     }
 }

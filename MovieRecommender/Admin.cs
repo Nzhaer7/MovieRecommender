@@ -77,5 +77,13 @@ namespace MovieRecommender
             Convert.ToString(results);
             return results;
         }
+
+        private void btnAdminGeriGit_Click(object sender, EventArgs e)
+        {
+            Giris giris = new Giris();
+            this.Hide();
+            giris.ShowDialog();
+            this.Close();
+        }
     }
 }
