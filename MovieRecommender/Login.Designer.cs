@@ -36,6 +36,7 @@
             this.lblAdiminSifremiUnuttum = new System.Windows.Forms.Label();
             this.lblKayitOl = new System.Windows.Forms.Label();
             this.btnLoginGeriGit = new System.Windows.Forms.Button();
+            this.chkbxLoginSifreGoster = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnAdminGiris
@@ -118,12 +119,24 @@
             this.btnLoginGeriGit.UseVisualStyleBackColor = true;
             this.btnLoginGeriGit.Click += new System.EventHandler(this.btnLoginGeriGit_Click);
             // 
+            // chkbxLoginSifreGoster
+            // 
+            this.chkbxLoginSifreGoster.AutoSize = true;
+            this.chkbxLoginSifreGoster.Location = new System.Drawing.Point(305, 312);
+            this.chkbxLoginSifreGoster.Name = "chkbxLoginSifreGoster";
+            this.chkbxLoginSifreGoster.Size = new System.Drawing.Size(88, 17);
+            this.chkbxLoginSifreGoster.TabIndex = 20;
+            this.chkbxLoginSifreGoster.Text = "Şifreyi Göster";
+            this.chkbxLoginSifreGoster.UseVisualStyleBackColor = true;
+            this.chkbxLoginSifreGoster.CheckedChanged += new System.EventHandler(this.chkbxLoginSifreGoster_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.chkbxLoginSifreGoster);
             this.Controls.Add(this.btnLoginGeriGit);
             this.Controls.Add(this.lblKayitOl);
             this.Controls.Add(this.lblAdiminSifremiUnuttum);
@@ -135,7 +148,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +163,6 @@
         private System.Windows.Forms.Label lblAdiminSifremiUnuttum;
         private System.Windows.Forms.Label lblKayitOl;
         private System.Windows.Forms.Button btnLoginGeriGit;
+        private System.Windows.Forms.CheckBox chkbxLoginSifreGoster;
     }
 }

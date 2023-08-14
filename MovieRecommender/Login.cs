@@ -54,12 +54,26 @@ namespace MovieRecommender
                     admin.ShowDialog();
                     this.Close();
                 }
+                else
+                {
+                    MessageBox.Show("Yanlış bilgi girdiniz", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
-        private void Login_Load(object sender, EventArgs e)
+
+
+        private void chkbxLoginSifreGoster_CheckedChanged(object sender, EventArgs e)
         {
-            txtbxLoginSifre.PasswordChar = '*';
+            if(chkbxLoginSifreGoster.Checked) 
+            { 
+                txtbxLoginSifre.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtbxLoginSifre.UseSystemPasswordChar = true;
+
+            }
         }
     }
 }

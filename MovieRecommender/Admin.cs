@@ -34,7 +34,7 @@ namespace MovieRecommender
             movieDbContext.Movies.Add(
                 new Movies
                 {
-                    MovieType = Convert.ToString(ChbxChnge()),
+                    MovieType = ChbxChnge(),
                     MovieName = txtAdminFlmİsmi.Text,
                     MovieScore = Convert.ToInt32(txtbxAdminPuani.Text),
                     MovieYear = Convert.ToInt32(txtAdminYili.Text),
@@ -43,38 +43,41 @@ namespace MovieRecommender
             var result = movieDbContext.SaveChanges();
             if (result > 0)
             {
-                load();
                 MessageBox.Show("Kayıt Eklendi");
+                load();
+
             }
         }
-        public ArrayList ChbxChnge()
+        public string ChbxChnge()
         {
-            ArrayList results = new ArrayList();
+            string results="";
+
             if (chckbxAdminKomedi.Checked)
             {
-                results.Add(lblAdminTurKomedi.Text);
+                results+=lblAdminTurKomedi.Text+",";
             }
-            else if(chkbxAdminAksiyon.Checked)
+            if(chkbxAdminAksiyon.Checked)
             {
-                results.Add(lblAdminTurAksiyon.Text);
+                results += lblAdminTurAksiyon.Text + ",";
             }
-            else if (chkbxAdminDram.Checked)
+            if (chkbxAdminDram.Checked)
             {
-                results.Add(lblAdminTurDram.Text);
+                results += lblAdminTurDram.Text + ",";
             }
-            else if(chkbxAdminGerilim.Checked)
+            if(chkbxAdminGerilim.Checked)
             {
-                results.Add(lblAdminTurGerilim.Text);
+                results += lblAdminTurGerilim.Text + ",";
             }
-            else if(chkbxAdminKorku.Checked)
+            if(chkbxAdminKorku.Checked)
             {
-                results.Add(lblAdminTurKorku.Text);
+                results += lblAdminTurKorku.Text + ",";
             }
-            else if(chkbxAdminMacera.Checked)
+            if(chkbxAdminMacera.Checked)
             {
-                results.Add(lblAdminTurMacera.Text);
+                results += lblAdminTurMacera.Text + ",";
             }
             Convert.ToString(results);
+
             return results;
         }
 
@@ -95,6 +98,8 @@ namespace MovieRecommender
             var result = movieDbContext.SaveChanges();
             if (result > 0)
                 MessageBox.Show("Kayıt başarı ile silindi", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                load();
+
         }
 
         private void dgvAdmin_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -120,6 +125,7 @@ namespace MovieRecommender
             var result = movieDbContext.SaveChanges();
             if (result > 0)
                 MessageBox.Show("Kayıt başarı ile güncllendi","", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                load();
         }
     }
 }
