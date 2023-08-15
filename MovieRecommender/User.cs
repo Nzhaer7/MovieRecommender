@@ -28,38 +28,144 @@ namespace MovieRecommender
 
         MovieDbContext movieDbContext = new MovieDbContext();
 
-        public string[] chbxChange()
+        public void chbxChange()
         {
-            string[] results = new string[0];
+            string prev = "";
             if (chkbxUserAksiyon.Checked)
             {
-                results.Append(lblUserTurAksiyon.Text.ToString());
+                foreach(var item in movieDbContext.Types)
+                {
+                    if (string.IsNullOrWhiteSpace(item.Aksiyon.ToString()))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        prev= item.Aksiyon.ToString();
+                        if(prev==item.Aksiyon.ToString())
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            rtxtBxUser.Text = item.Aksiyon.ToString();
+                        }
+                    }
+                }
             }
             if (chckbxUserKomedi.Checked)
             {
-                results.Append(lblUserTurKomedi.Text.ToString());
+                foreach (var item in movieDbContext.Types)
+                {
+                    if (string.IsNullOrWhiteSpace(item.Komedi.ToString()))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        if (prev == item.Komedi.ToString())
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            rtxtBxUser.Text = item.Komedi.ToString();
+                            prev = item.Komedi.ToString();
+                        }    
+                    }
+                }
             }
             if (chkbxUserDram.Checked)
             {
-                results.Append(lblUserTurDram.Text.ToString());
+                foreach (var item in movieDbContext.Types)
+                {
+                    if (string.IsNullOrWhiteSpace(item.Dram.ToString()))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        if(prev == item.Dram.ToString())
+                        {
+                            continue;
+                        }
+                        else 
+                        {
+                            rtxtBxUser.Text = item.Dram.ToString();
+                            prev = item.Dram.ToString();
+                        }
+                    }
+                }
             }
             if (chkbxUserKorku.Checked)
             {
-                results.Append(lblUserTurKorku.Text.ToString());
+                foreach (var item in movieDbContext.Types)
+                {
+                    if (string.IsNullOrWhiteSpace(item.Korku.ToString()))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        if (prev == item.Korku.ToString())
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            rtxtBxUser.Text = item.Korku.ToString();
+                            prev = item.Korku.ToString();
+                        }
+                    }
+                }
             }
             if (chkbxUserMacera.Checked)
             {
-                results.Append(lblUserTurMacera.Text.ToString());
+                foreach (var item in movieDbContext.Types)
+                {
+                    if (string.IsNullOrWhiteSpace(item.Macera.ToString()))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        if (prev == item.Macera.ToString())
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            rtxtBxUser.Text = item.Macera.ToString();
+                            prev = item.Macera.ToString();
+                        } 
+                    }
+                }
             }
             if (chkbxUserGerilim.Checked)
             {
-                results.Append(lblUserTurGerilim.Text.ToString());
+                foreach (var item in movieDbContext.Types)
+                {
+                    if (string.IsNullOrWhiteSpace(item.Gerilim.ToString()))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        if ( prev == item.Gerilim.ToString())
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            rtxtBxUser.Text = item.Gerilim.ToString();
+                        } 
+                    }
+                }
             }
-            return results;
         }
         private void btnUserFlmAra_Click(object sender, EventArgs e)
         {
-            
+            chbxChange();   
         }
 
         private void User_Load(object sender, EventArgs e)
