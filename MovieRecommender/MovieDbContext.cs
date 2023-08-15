@@ -12,5 +12,7 @@ namespace MovieRecommender
         public DbSet<Movies> Movies { get; set; }
 
         public DbSet<Users> Users { get; set; }
+
+        public DbSet<Types> Types { get; set; }
     }
 }

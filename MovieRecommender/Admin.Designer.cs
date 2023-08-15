@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grpbxAdmin = new System.Windows.Forms.GroupBox();
+            this.btnAdminGuncelle = new System.Windows.Forms.Button();
+            this.btnAdminSil = new System.Windows.Forms.Button();
             this.txtbxAdminPuani = new System.Windows.Forms.TextBox();
             this.txtAdminYili = new System.Windows.Forms.TextBox();
             this.txtAdminFlmİsmi = new System.Windows.Forms.TextBox();
@@ -47,8 +49,6 @@
             this.btnAdminFlmEkle = new System.Windows.Forms.Button();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
             this.btnAdminGeriGit = new System.Windows.Forms.Button();
-            this.btnAdminSil = new System.Windows.Forms.Button();
-            this.btnAdminGuncelle = new System.Windows.Forms.Button();
             this.grpbxAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,26 @@
             this.grpbxAdmin.Size = new System.Drawing.Size(480, 509);
             this.grpbxAdmin.TabIndex = 14;
             this.grpbxAdmin.TabStop = false;
+            // 
+            // btnAdminGuncelle
+            // 
+            this.btnAdminGuncelle.Location = new System.Drawing.Point(209, 378);
+            this.btnAdminGuncelle.Name = "btnAdminGuncelle";
+            this.btnAdminGuncelle.Size = new System.Drawing.Size(107, 29);
+            this.btnAdminGuncelle.TabIndex = 35;
+            this.btnAdminGuncelle.Text = "Güncelle";
+            this.btnAdminGuncelle.UseVisualStyleBackColor = true;
+            this.btnAdminGuncelle.Click += new System.EventHandler(this.btnAdminGuncelle_Click);
+            // 
+            // btnAdminSil
+            // 
+            this.btnAdminSil.Location = new System.Drawing.Point(334, 378);
+            this.btnAdminSil.Name = "btnAdminSil";
+            this.btnAdminSil.Size = new System.Drawing.Size(107, 29);
+            this.btnAdminSil.TabIndex = 33;
+            this.btnAdminSil.Text = "Sil";
+            this.btnAdminSil.UseVisualStyleBackColor = true;
+            this.btnAdminSil.Click += new System.EventHandler(this.btnAdminSil_Click);
             // 
             // txtbxAdminPuani
             // 
@@ -251,26 +271,6 @@
             this.btnAdminGeriGit.Text = "Geri Git";
             this.btnAdminGeriGit.UseVisualStyleBackColor = true;
             this.btnAdminGeriGit.Click += new System.EventHandler(this.btnAdminGeriGit_Click);
-            // 
-            // btnAdminSil
-            // 
-            this.btnAdminSil.Location = new System.Drawing.Point(334, 378);
-            this.btnAdminSil.Name = "btnAdminSil";
-            this.btnAdminSil.Size = new System.Drawing.Size(107, 29);
-            this.btnAdminSil.TabIndex = 33;
-            this.btnAdminSil.Text = "Sil";
-            this.btnAdminSil.UseVisualStyleBackColor = true;
-            this.btnAdminSil.Click += new System.EventHandler(this.btnAdminSil_Click);
-            // 
-            // btnAdminGuncelle
-            // 
-            this.btnAdminGuncelle.Location = new System.Drawing.Point(209, 378);
-            this.btnAdminGuncelle.Name = "btnAdminGuncelle";
-            this.btnAdminGuncelle.Size = new System.Drawing.Size(107, 29);
-            this.btnAdminGuncelle.TabIndex = 35;
-            this.btnAdminGuncelle.Text = "Güncelle";
-            this.btnAdminGuncelle.UseVisualStyleBackColor = true;
-            this.btnAdminGuncelle.Click += new System.EventHandler(this.btnAdminGuncelle_Click);
             // 
             // Admin
             // 

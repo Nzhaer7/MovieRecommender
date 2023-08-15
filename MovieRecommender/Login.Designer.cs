@@ -60,9 +60,8 @@
             // txtbxLoginSifre
             // 
             this.txtbxLoginSifre.Location = new System.Drawing.Point(305, 274);
-            this.txtbxLoginSifre.Multiline = true;
             this.txtbxLoginSifre.Name = "txtbxLoginSifre";
-            this.txtbxLoginSifre.Size = new System.Drawing.Size(207, 23);
+            this.txtbxLoginSifre.Size = new System.Drawing.Size(207, 20);
             this.txtbxLoginSifre.TabIndex = 2;
             // 
             // label1
@@ -148,6 +147,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

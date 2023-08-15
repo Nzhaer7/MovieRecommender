@@ -30,57 +30,133 @@ namespace MovieRecommender
 
         private void btnAdminFlmEkle_Click(object sender, EventArgs e)
         {
-            
-            movieDbContext.Movies.Add(
+            try
+            {
+                ChbxChnge();
+                movieDbContext.Movies.Add(
                 new Movies
                 {
-                    MovieType = ChbxChnge(),
                     MovieName = txtAdminFlmİsmi.Text,
                     MovieScore = Convert.ToInt32(txtbxAdminPuani.Text),
                     MovieYear = Convert.ToInt32(txtAdminYili.Text),
                 }
                 );
-            var result = movieDbContext.SaveChanges();
-            if (result > 0)
-            {
-                MessageBox.Show("Kayıt Eklendi");
-                load();
+                var result = movieDbContext.SaveChanges();
+                if (result > 0)
+                {
+                    MessageBox.Show("Kayıt Eklendi");
+                    load();
 
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
-        public string ChbxChnge()
+        public void ChbxChnge()
         {
-            string results="";
 
             if (chckbxAdminKomedi.Checked)
             {
-                results+=lblAdminTurKomedi.Text+",";
+                if(string.IsNullOrWhiteSpace(txtAdminFlmİsmi.Text))
+                {
+                    MessageBox.Show("Önce film ismini girin", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else 
+                {
+                    movieDbContext.Types.Add(
+                    new Types
+                    {
+                        Komedi = txtAdminFlmİsmi.Text
+                    });
+                    
+                }
+                
             }
-            if(chkbxAdminAksiyon.Checked)
+            if (chkbxAdminAksiyon.Checked)
             {
-                results += lblAdminTurAksiyon.Text + ",";
+                if (string.IsNullOrWhiteSpace(txtAdminFlmİsmi.Text))
+                {
+                    MessageBox.Show("Önce film ismini girin", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    movieDbContext.Types.Add(
+                    new Types
+                    {
+                        Aksiyon = txtAdminFlmİsmi.Text
+                    });
+                   
+                }
             }
             if (chkbxAdminDram.Checked)
             {
-                results += lblAdminTurDram.Text + ",";
+                if (string.IsNullOrWhiteSpace(txtAdminFlmİsmi.Text))
+                {
+                    MessageBox.Show("Önce film ismini girin", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    movieDbContext.Types.Add(
+                    new Types
+                    {
+                        Dram = txtAdminFlmİsmi.Text
+                    });
+                    
+                }
             }
-            if(chkbxAdminGerilim.Checked)
+            if (chkbxAdminGerilim.Checked)
             {
-                results += lblAdminTurGerilim.Text + ",";
+                if (string.IsNullOrWhiteSpace(txtAdminFlmİsmi.Text))
+                {
+                    MessageBox.Show("Önce film ismini girin", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    movieDbContext.Types.Add(
+                    new Types
+                    {
+                        Gerilim = txtAdminFlmİsmi.Text
+                    });
+                    
+                }
             }
-            if(chkbxAdminKorku.Checked)
+            if (chkbxAdminKorku.Checked)
             {
-                results += lblAdminTurKorku.Text + ",";
+                if (string.IsNullOrWhiteSpace(txtAdminFlmİsmi.Text))
+                {
+                    MessageBox.Show("Önce film ismini girin", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    movieDbContext.Types.Add(
+                    new Types
+                    {
+                        Korku = txtAdminFlmİsmi.Text
+                    });
+                    
+                }
             }
-            if(chkbxAdminMacera.Checked)
+            if (chkbxAdminMacera.Checked)
             {
-                results += lblAdminTurMacera.Text + ",";
+                if (string.IsNullOrWhiteSpace(txtAdminFlmİsmi.Text))
+                {
+                    MessageBox.Show("Önce film ismini girin", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    movieDbContext.Types.Add(
+                    new Types
+                    {
+                        Macera = txtAdminFlmİsmi.Text
+                    });
+                    
+                }
             }
-            Convert.ToString(results);
-
-            return results;
+            var result = movieDbContext.SaveChanges();
         }
-
         private void btnAdminGeriGit_Click(object sender, EventArgs e)
         {
             Giris giris = new Giris();
@@ -91,41 +167,64 @@ namespace MovieRecommender
 
         private void btnAdminSil_Click(object sender, EventArgs e)
         {
-            int İd = Convert.ToInt32(dgvAdmin.CurrentRow.Cells[0].Value);
-            var kayıt = movieDbContext.Movies.Find(İd);
+            try
+            {
+                int İd = Convert.ToInt32(dgvAdmin.CurrentRow.Cells[0].Value);
+                var kayıt = movieDbContext.Movies.Find(İd);
 
-            movieDbContext.Movies.Remove(kayıt);
-            var result = movieDbContext.SaveChanges();
-            if (result > 0)
-                MessageBox.Show("Kayıt başarı ile silindi", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                movieDbContext.Movies.Remove(kayıt);
+                var result = movieDbContext.SaveChanges();
+                if (result > 0)
+                    MessageBox.Show("Kayıt başarı ile silindi", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
         private void dgvAdmin_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int İd = Convert.ToInt32(dgvAdmin.CurrentRow.Cells[0].Value);
-            var kayıt = movieDbContext.Movies.Find(İd);
+            try
+            {
+                int İd = Convert.ToInt32(dgvAdmin.CurrentRow.Cells[0].Value);
+                var kayıt = movieDbContext.Movies.Find(İd);
 
-            txtAdminFlmİsmi.Text=kayıt.MovieName;
-            txtAdminYili.Text=kayıt.MovieYear.ToString();
-            txtbxAdminPuani.Text=kayıt.MovieScore.ToString();
+                txtAdminFlmİsmi.Text = kayıt.MovieName;
+                txtAdminYili.Text = kayıt.MovieYear.ToString();
+                txtbxAdminPuani.Text = kayıt.MovieScore.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
 
         }
 
         private void btnAdminGuncelle_Click(object sender, EventArgs e)
         {
-            int İd = Convert.ToInt32(dgvAdmin.CurrentRow.Cells[0].Value);
-            var kayıt = movieDbContext.Movies.Find(İd);
+            try
+            {
+                int İd = Convert.ToInt32(dgvAdmin.CurrentRow.Cells[0].Value);
+                var kayıt = movieDbContext.Movies.Find(İd);
 
-            kayıt.MovieName = txtAdminFlmİsmi.Text;
-            kayıt.MovieYear = Convert.ToInt32(txtAdminYili.Text);
-            kayıt.MovieScore = Convert.ToInt32(txtbxAdminPuani.Text);
+                kayıt.MovieName = txtAdminFlmİsmi.Text;
+                kayıt.MovieYear = Convert.ToInt32(txtAdminYili.Text);
+                kayıt.MovieScore = Convert.ToInt32(txtbxAdminPuani.Text);
 
-            var result = movieDbContext.SaveChanges();
-            if (result > 0)
-                MessageBox.Show("Kayıt başarı ile güncllendi","", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                var result = movieDbContext.SaveChanges();
+                if (result > 0)
+                    MessageBox.Show("Kayıt başarı ile güncllendi", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

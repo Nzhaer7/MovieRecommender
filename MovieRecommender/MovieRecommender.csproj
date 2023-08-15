@@ -92,6 +92,7 @@
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Types.cs" />
     <Compile Include="User.cs">
       <SubType>Form</SubType>
     </Compile>

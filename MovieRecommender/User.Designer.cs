@@ -190,6 +190,7 @@
             this.btnUserFlmAra.TabIndex = 14;
             this.btnUserFlmAra.Text = "Öner";
             this.btnUserFlmAra.UseVisualStyleBackColor = true;
+            this.btnUserFlmAra.Click += new System.EventHandler(this.btnUserFlmAra_Click);
             // 
             // rtxtBxUser
             // 
@@ -222,6 +223,7 @@
             this.Name = "User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Recommender";
+            this.Load += new System.EventHandler(this.User_Load);
             this.grpbxUser.ResumeLayout(false);
             this.grpbxUser.PerformLayout();
             this.ResumeLayout(false);

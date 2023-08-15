@@ -19,9 +19,13 @@ namespace MovieRecommender
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            /*Login login = new Login();
             this.Hide();
             login.ShowDialog();
+            this.Close();*/
+            Admin admin = new Admin();
+            this.Hide();
+            admin.ShowDialog();
             this.Close();
         }
 

@@ -61,8 +61,6 @@ namespace MovieRecommender
             }
         }
 
-
-
         private void chkbxLoginSifreGoster_CheckedChanged(object sender, EventArgs e)
         {
             if(chkbxLoginSifreGoster.Checked) 
@@ -72,8 +70,12 @@ namespace MovieRecommender
             else
             {
                 txtbxLoginSifre.UseSystemPasswordChar = true;
-
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txtbxLoginSifre.UseSystemPasswordChar = true;
         }
     }
 }
